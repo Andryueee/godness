@@ -1,5 +1,5 @@
 {
-    "name": "gr421_vaavi/ceinizh-m1",
+    "name": "andryueee/godness",
     "description": "Bla bla bla",
     "type": "project",
     "license": "MIT",
@@ -10,5 +10,14 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+        "php": "^7.4 | ^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Src\\": "pop-it-mvc/core/Src/",
+            "": "pop-it-mvc/app/"
+        }
+    }
 }
+
