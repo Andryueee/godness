@@ -1,0 +1,14 @@
+{
+    "name": "gr421_vaavi/ceinizh-m1",
+    "description": "Bla bla bla",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andryueee",
+            "email": "vasyukov2004@list.ru"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
