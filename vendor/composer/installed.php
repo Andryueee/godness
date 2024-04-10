@@ -3,7 +3,7 @@
         'name' => 'andryueee/godness',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '88901833055b43a33f42dda608a57c5842fbc01f',
+        'reference' => '95be5f3d23e1777b8d43bb815ab4f31cf293ebfc',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'andryueee/godness' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '88901833055b43a33f42dda608a57c5842fbc01f',
+            'reference' => '95be5f3d23e1777b8d43bb815ab4f31cf293ebfc',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -143,6 +143,17 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../nesbot/carbon',
             'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'nikic/fast-route' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => 'd3ada013d0f683ad2a8d0614fc97917a6ab72ce9',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../nikic/fast-route',
+            'aliases' => array(
+                0 => '2.0.x-dev',
+            ),
             'dev_requirement' => false,
         ),
         'psr/clock' => array(
