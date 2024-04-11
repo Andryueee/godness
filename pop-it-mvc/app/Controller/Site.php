@@ -53,4 +53,18 @@ class Site
     {
         return new View('site.hello', ['message' => 'hello working']);
     }
+
+    public function teachers(): string
+    {
+        return new View('site.teachers', ['message' => 'Преподаватели']);
+    }
+    public function discipline(): string
+    {
+        return new View('site.discipline', ['message' => 'Дисциплины']);
+    }
+    public function departments(): string
+    {
+        return new View('site.departments', ['message' => 'Кафедры']);
+    }
+
 }

@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: rgba(50, 50, 50, 1);
+    height: 100px;
+    margin-bottom: 80px;
+}
+.message{
+    display: flex;
+    justify-content: center;
+}
+
+.main_button{
+    position: absolute;
+    margin-top: 39px;
+    margin-left: 260px;
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+
+}
+.teachers_button{
+    position: absolute;
+    margin-top: 39px;
+    margin-left: 518px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+.departments_button{
+    position: absolute;
+    margin-top: 39px;
+    margin-left: 677px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.discipline_button{
+    position: absolute;
+    margin-top: 39px;
+    margin-left: 811px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.logout_button{
+    position: absolute;
+    margin-left: 1500px;
+    margin-top: 39px;
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+}
+.login_button{
+    position: absolute;
+    margin-left: 1500px;
+    margin-top: 39px;
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.login_div{
+    background-color: rgba(75, 75, 75, 1);
+    width: 480px;
+    height: 477px;
+    margin: auto;
+    border-radius: 20px;
+
+
+
+}
+.login_page{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+}
+
+label{
+    margin-top: 40px;
+    color: white;
+}
+::placeholder{
+    width: 100px;
+
+
+}
+input{
+    margin-top: 10px;
+    border-radius: 100px;
+    width: 450px;
+    height: 64px;
+}
+input::placeholder{
+
+}
+.button_login{
+    background-color: rgb(74, 126, 64);
+    margin-top: 60px;
+    border-radius: 50px;
+    width: 258px;
+    height: 51px;
+    font-size: 32px;
+    color: #ffffff;
+    border: none;
+}
+
+
+
+
+.discipline_list{
+    margin-top: 50px;
+    margin-left: 400px;
+    display: flex;
+    flex-direction: column;
+}
+p{
+    font-size: 28px;
+}
+.discipline_departments_list{
+    margin-top: -160px;
+    margin-left: 850px;
+    display: flex;
+    flex-direction: column;
+}
+.discipline_text{
+    font-size: 50px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+}
+
+
+.departments_list{
+    margin-top: 50px;
+    margin-left: 100px;
+    align-items: center;
+
+}
+.teachers_text{
+    font-size: 50px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}

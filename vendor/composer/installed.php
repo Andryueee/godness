@@ -3,7 +3,7 @@
         'name' => 'andryueee/godness',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '95be5f3d23e1777b8d43bb815ab4f31cf293ebfc',
+        'reference' => 'ae124304584b75e0f1cf7d1a9641c7e1dea1d3cf',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'andryueee/godness' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '95be5f3d23e1777b8d43bb815ab4f31cf293ebfc',
+            'reference' => 'ae124304584b75e0f1cf7d1a9641c7e1dea1d3cf',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
