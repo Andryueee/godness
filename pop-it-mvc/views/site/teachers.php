@@ -1,5 +1,5 @@
+<h1 class="teachers_text">Список сотрудников</h1>
 <div class="teachers_all">
-    <h1 class="teachers_text">Список сотрудников</h1>
     <div class="teachers_list">
         <p>Васюков А.В</p>
         <p>Попов П.П</p>

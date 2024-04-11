@@ -9,6 +9,11 @@ header{
     height: 100px;
     margin-bottom: 80px;
 }
+.nav_buttons{
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+}
 .message{
     display: flex;
     justify-content: center;
@@ -21,49 +26,81 @@ header{
     color: white;
     text-decoration: none;
     font-size: 22px;
+}
 
+.main_button:hover{
+    color: #ff4a4a;
+    transition: 0.5s;
 }
+
 .teachers_button{
-    position: absolute;
+    padding-right: 20px;
     margin-top: 39px;
-    margin-left: 518px;
     color: white;
     text-decoration: none;
     font-size: 16px;
 }
+.teachers_button:hover{
+    color: #ff4a4a;
+    transition: 0.5s;
+}
+
 .departments_button{
-    position: absolute;
     margin-top: 39px;
-    margin-left: 677px;
     color: white;
     text-decoration: none;
     font-size: 16px;
+}
+.departments_button:hover{
+    color: #ff4a4a;
+    transition: 0.5s;
 }
 
 .discipline_button{
-    position: absolute;
+    padding-left: 20px;
     margin-top: 39px;
-    margin-left: 811px;
     color: white;
     text-decoration: none;
     font-size: 16px;
 }
+.discipline_button:hover{
+    color: #ff4a4a;
+    transition: 0.5s;
+}
 
 .logout_button{
+    justify-content: center;
+    display: flex;
+    margin-left: 1400px;
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    padding-bottom: 500px;
+}
+
+.logout_button:hover{
+    color: #ff4a4a;
+    transition: 0.5s;
+}
+
+.login_button{
     position: absolute;
-    margin-left: 1500px;
     margin-top: 39px;
     color: white;
     text-decoration: none;
     font-size: 22px;
 }
-.login_button{
-    position: absolute;
-    margin-left: 1500px;
-    margin-top: 39px;
+.auth_title{
+    margin-top: 10px;
     color: white;
-    text-decoration: none;
-    font-size: 22px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.login_button:hover{
+    color: #ff4a4a;
+    transition: 0.5s;
 }
 
 .login_div{
@@ -153,4 +190,34 @@ p{
     align-items: center;
     justify-content: center;
     display: flex;
+}
+.teachers_list{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.teachers_birth_date{
+    padding-left: 40px;
+    padding-right: 40px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+
+}
+
+.teachers_role{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+
+}
+
+.teachers_all{
+    padding-top: 40px;
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
 }

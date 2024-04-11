@@ -5,7 +5,7 @@
 if (!app()->auth::check()):
     ?>
 <div class="login_div">
-    <h1>Авторизация</h1>
+    <h1 class="auth_title">Авторизация</h1>
     <form class="login_page" method="post">
         <label>Введите Логин</label>
         <input type="text" name="login">

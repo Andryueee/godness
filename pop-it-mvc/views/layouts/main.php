@@ -12,9 +12,12 @@
 <header>
     <nav>
         <a class="main_button" href="<?= app()->route->getUrl('/hello') ?>">Главная</a>
-        <a class="teachers_button" href="<?= app()->route->getUrl('/teachers') ?>">Преподаватели</a>
-        <a class="departments_button" href="<?= app()->route->getUrl('/departments') ?>">Кафедры</a>
-        <a class="discipline_button" href="<?= app()->route->getUrl('/discipline') ?>">Дисциплины</a>
+        <div class="nav_buttons">
+            <a class="teachers_button" href="<?= app()->route->getUrl('/teachers') ?>">Преподаватели</a>
+            <a class="departments_button" href="<?= app()->route->getUrl('/departments') ?>">Кафедры</a>
+            <a class="discipline_button" href="<?= app()->route->getUrl('/discipline') ?>">Дисциплины</a>
+
+        </div>
         <?php
         if (!app()->auth::check()):
             ?>
@@ -22,7 +25,7 @@
         <?php
         else:
             ?>
-            <a class="logout_button" href="<?= app()->route->getUrl('/logout') ?>">Выход (<?= app()->auth::user()->name ?>)</a>
+            <a class="logout_button" href="<?= app()->route->getUrl('/logout') ?>">Выход</a>
         <?php
         endif;
         ?>
