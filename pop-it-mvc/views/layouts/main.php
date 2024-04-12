@@ -11,17 +11,28 @@
 <body>
 <header>
     <nav>
+        <?php
+        if (!app()->auth::check()):
+            ?>
+            <h1 class="warning_title_header">Вам необходимо авторизоваться!</h1>
+        <?php
+        else:
+            ?>
         <a class="main_button" href="<?= app()->route->getUrl('/hello') ?>">Главная</a>
         <div class="nav_buttons">
             <a class="teachers_button" href="<?= app()->route->getUrl('/teachers') ?>">Преподаватели</a>
             <a class="departments_button" href="<?= app()->route->getUrl('/departments') ?>">Кафедры</a>
             <a class="discipline_button" href="<?= app()->route->getUrl('/discipline') ?>">Дисциплины</a>
+            <a class="add_person_button" href="<?= app()->route->getUrl('/signup') ?>">Добавить преподавателя</a>
 
         </div>
+        <div class="if_button">
         <?php
+        endif;
+        ?>
+            <?php
         if (!app()->auth::check()):
             ?>
-            <a class="login_button" href="<?= app()->route->getUrl('/login') ?>">Вход</a>
         <?php
         else:
             ?>
@@ -29,6 +40,7 @@
         <?php
         endif;
         ?>
+        </div>
     </nav>
 </header>
 <main>

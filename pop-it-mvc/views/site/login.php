@@ -8,9 +8,9 @@ if (!app()->auth::check()):
     <h1 class="auth_title">Авторизация</h1>
     <form class="login_page" method="post">
         <label>Введите Логин</label>
-        <input type="text" name="login">
+        <input class="login_input" type="text" name="login">
         <label>Введите Пароль</label>
-        <input type="password" name="password">
+        <input class="login_input" type="password" name="password">
         <button class="button_login" >Войти</button>
     </form>
 </div>

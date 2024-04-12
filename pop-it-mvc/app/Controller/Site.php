@@ -36,7 +36,7 @@ class Site
     public function signup(Request $request): string
     {
         if ($request->method === 'POST' && User::create($request->all())) {
-            app()->route->redirect('/go');
+            app()->route->redirect('/signup');
         }
         return new View('site.signup');
     }
@@ -58,6 +58,8 @@ class Site
     {
         return new View('site.teachers', ['message' => 'Преподаватели']);
     }
+
+
     public function discipline(): string
     {
         return new View('site.discipline', ['message' => 'Дисциплины']);
@@ -65,6 +67,10 @@ class Site
     public function departments(): string
     {
         return new View('site.departments', ['message' => 'Кафедры']);
+    }
+    public function add(): string
+    {
+        return new View('site.add', ['message' => 'добавление преподавателя']);
     }
 
 }

@@ -7,7 +7,7 @@
 header{
     background-color: rgba(50, 50, 50, 1);
     height: 100px;
-    margin-bottom: 80px;
+    margin-bottom: 25px;
 }
 .nav_buttons{
     margin: 0 auto;
@@ -75,7 +75,9 @@ header{
     color: white;
     text-decoration: none;
     font-size: 22px;
-    padding-bottom: 500px;
+    position: relative;
+    bottom: 20px;
+
 }
 
 .logout_button:hover{
@@ -109,9 +111,7 @@ header{
     height: 477px;
     margin: auto;
     border-radius: 20px;
-
-
-
+    padding-top: 20px;
 }
 .login_page{
     margin-top: 20px;
@@ -119,8 +119,6 @@ header{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
-
 }
 
 label{
@@ -129,18 +127,14 @@ label{
 }
 ::placeholder{
     width: 100px;
-
-
 }
-input{
+.login_input{
     margin-top: 10px;
     border-radius: 100px;
     width: 450px;
     height: 64px;
 }
-input::placeholder{
 
-}
 .button_login{
     background-color: rgb(74, 126, 64);
     margin-top: 60px;
@@ -151,9 +145,10 @@ input::placeholder{
     color: #ffffff;
     border: none;
 }
-
-
-
+.button_login:hover{
+    transition: 0.5s;
+    background-color: rgba(92, 171, 73, 0.87);
+}
 
 .discipline_list{
     margin-top: 50px;
@@ -161,6 +156,7 @@ input::placeholder{
     display: flex;
     flex-direction: column;
 }
+
 p{
     font-size: 28px;
 }
@@ -175,27 +171,25 @@ p{
     align-items: center;
     justify-content: center;
     display: flex;
-
 }
-
 
 .departments_list{
     margin-top: 50px;
     margin-left: 100px;
     align-items: center;
-
 }
+
 .teachers_text{
     font-size: 50px;
     align-items: center;
     justify-content: center;
     display: flex;
 }
+
 .teachers_list{
     display: flex;
     justify-content: center;
     flex-direction: column;
-
 }
 
 .teachers_birth_date{
@@ -218,6 +212,105 @@ p{
     padding-top: 40px;
     display: flex;
     flex-direction: row;
+    display: flex;
+    justify-content: center;
+}
+
+.add_person_button{
+    color: #c4c4c4;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 39px;
+    padding-left: 50px;
+}
+
+.add_person_button:hover{
+    color: #ff4a4a;
+    transition: 0.5s;
+}
+
+.add_person_title{
+    margin: 0 auto;
+    padding-bottom: 20px;
+    justify-content: center;
+    display: flex;
+    font-size: 30px;
+}
+
+.if_button{
+    position: absolute;
+    margin-bottom: 50px;
+}
+
+.signup_page{
+    width: auto;
+    height: auto;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.add_person_div{
+    background-color: rgba(75, 75, 75, 1);
+    width: 700px;
+    height: auto;
+    margin: auto;
+    padding-bottom: 20px;
+    border-radius: 20px;
+}
+
+.add_input{
+    margin-top: 10px;
+    border-radius: 20px;
+    width: 450px;
+    height: 44px;
+}
+
+.warning_title_header{
+    color: white;
+    font-size: 30px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+h1{
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+}
+
+.add_button{
+    margin-top: 20px;
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+}
+
+.add_teacher_button{
+    margin-top: 20px;
+    width: 200px;
+    height: 50px;
+    background-color: #e0e0e0;
+    text-decoration: none;
+    color: #000000;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.add_teacher_button:hover{
+    transition: 0.5s;
+    background-color: rgba(38, 126, 45, 0.51);
+}
+
+.add_teacher_div{
+    padding-top: 15px;
+    padding-right: 350px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
 }
