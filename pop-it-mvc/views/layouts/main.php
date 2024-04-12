@@ -23,7 +23,7 @@
             <a class="teachers_button" href="<?= app()->route->getUrl('/teachers') ?>">Преподаватели</a>
             <a class="departments_button" href="<?= app()->route->getUrl('/departments') ?>">Кафедры</a>
             <a class="discipline_button" href="<?= app()->route->getUrl('/discipline') ?>">Дисциплины</a>
-            <a class="add_person_button" href="<?= app()->route->getUrl('/signup') ?>">Добавить преподавателя</a>
+            <a class="add_person_button" href="<?= app()->route->getUrl('/signup') ?>">Добавить деканата</a>
 
         </div>
         <div class="if_button">

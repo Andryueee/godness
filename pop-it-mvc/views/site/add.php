@@ -17,8 +17,8 @@ else:
             <input class="add_input" type="text" name="name">
             <label>Введите дату рождения</label>
             <input class="add_input" type="date" name="name">
-            <label>Введите роль для сотрудника</label>
-            <input class="add_input" type="text" name="name">
+<!--            <label>Введите роль для сотрудника</label>-->
+<!--            <input class="add_input" type="text" name="name">-->
 
             <button class="add_button">Добавить</button>
         </form>

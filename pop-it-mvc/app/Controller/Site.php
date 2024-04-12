@@ -73,4 +73,14 @@ class Site
         return new View('site.add', ['message' => 'добавление преподавателя']);
     }
 
+    public function add_discipline(): string
+    {
+        return new View('site.add_discipline', ['message' => 'добавление преподавателя']);
+    }
+
+    public function add_departments(): string
+    {
+        return new View('site.add_departments', ['message' => 'добавление преподавателя']);
+    }
+
 }

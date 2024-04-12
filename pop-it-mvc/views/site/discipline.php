@@ -22,6 +22,9 @@ else:
             <p>Кафедра математики и статистики</p>
             <p>Кафедра экономики и управления</p>
         </div>
+        <div class="add_discipline_div">
+            <a class="add_teacher_button" href="add_discipline">Добавить</a>
+        </div>
     </div>
 <?php
 endif;
