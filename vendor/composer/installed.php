@@ -3,7 +3,7 @@
         'name' => 'andryueee/godness',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'ae124304584b75e0f1cf7d1a9641c7e1dea1d3cf',
+        'reference' => 'f15b7e3df622b916b0b7bc2877fed690e717e792',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'andryueee/godness' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'ae124304584b75e0f1cf7d1a9641c7e1dea1d3cf',
+            'reference' => 'f15b7e3df622b916b0b7bc2877fed690e717e792',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -94,7 +94,7 @@
         'illuminate/database' => array(
             'pretty_version' => '10.x-dev',
             'version' => '10.9999999.9999999.9999999-dev',
-            'reference' => '58c2c155331c4cffbed930529e283f8906869478',
+            'reference' => 'd6bded9f69b2c1094d24008afcce85a002f7ab04',
             'type' => 'library',
             'install_path' => __DIR__ . '/../illuminate/database',
             'aliases' => array(),
@@ -213,7 +213,7 @@
         'symfony/polyfill-mbstring' => array(
             'pretty_version' => '1.x-dev',
             'version' => '1.9999999.9999999.9999999-dev',
-            'reference' => 'e5e7ddb00b859dbdf5ad8f3bbe4cd29a3a37aa34',
+            'reference' => '3cf95983a25d6439cac5f5164f0bfeeb1eb5d264',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/polyfill-mbstring',
             'aliases' => array(),
@@ -231,7 +231,7 @@
         'symfony/translation' => array(
             'pretty_version' => '6.4.x-dev',
             'version' => '6.4.9999999.9999999-dev',
-            'reference' => '44eda81d684f71f1c1aa1495e03e8a2014230019',
+            'reference' => 'fc05d2dd30c3529266108c8b51ce5487f1684f50',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/translation',
             'aliases' => array(),

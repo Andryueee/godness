@@ -7,6 +7,8 @@ if (!app()->auth::check()):
 <div class="login_div">
     <h1 class="auth_title">Авторизация</h1>
     <form class="login_page" method="post">
+        <input name="csrf_token" type="hidden" value="<?= app()->auth::generateCSRF() ?>"/>
+
         <label>Введите Логин</label>
         <input class="login_input" type="text" name="login">
         <label>Введите Пароль</label>

@@ -485,12 +485,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/database.git",
-                "reference": "58c2c155331c4cffbed930529e283f8906869478"
+                "reference": "d6bded9f69b2c1094d24008afcce85a002f7ab04"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/database/zipball/58c2c155331c4cffbed930529e283f8906869478",
-                "reference": "58c2c155331c4cffbed930529e283f8906869478",
+                "url": "https://api.github.com/repos/illuminate/database/zipball/d6bded9f69b2c1094d24008afcce85a002f7ab04",
+                "reference": "d6bded9f69b2c1094d24008afcce85a002f7ab04",
                 "shasum": ""
             },
             "require": {
@@ -550,7 +550,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2024-04-04T17:45:10+00:00"
+            "time": "2024-04-10T14:54:03+00:00"
         },
         {
             "name": "illuminate/events",
@@ -1171,12 +1171,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "e5e7ddb00b859dbdf5ad8f3bbe4cd29a3a37aa34"
+                "reference": "3cf95983a25d6439cac5f5164f0bfeeb1eb5d264"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/e5e7ddb00b859dbdf5ad8f3bbe4cd29a3a37aa34",
-                "reference": "e5e7ddb00b859dbdf5ad8f3bbe4cd29a3a37aa34",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/3cf95983a25d6439cac5f5164f0bfeeb1eb5d264",
+                "reference": "3cf95983a25d6439cac5f5164f0bfeeb1eb5d264",
                 "shasum": ""
             },
             "require": {
@@ -1244,7 +1244,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-03-14T13:49:05+00:00"
+            "time": "2024-04-12T09:26:28+00:00"
         },
         {
             "name": "symfony/polyfill-php80",
@@ -1333,12 +1333,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "44eda81d684f71f1c1aa1495e03e8a2014230019"
+                "reference": "fc05d2dd30c3529266108c8b51ce5487f1684f50"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/44eda81d684f71f1c1aa1495e03e8a2014230019",
-                "reference": "44eda81d684f71f1c1aa1495e03e8a2014230019",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/fc05d2dd30c3529266108c8b51ce5487f1684f50",
+                "reference": "fc05d2dd30c3529266108c8b51ce5487f1684f50",
                 "shasum": ""
             },
             "require": {
@@ -1420,7 +1420,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-04-03T07:20:51+00:00"
+            "time": "2024-04-12T22:37:50+00:00"
         },
         {
             "name": "symfony/translation-contracts",
