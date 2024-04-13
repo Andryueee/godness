@@ -3,7 +3,7 @@
 namespace Controller;
 
 use Illuminate\Database\Capsule\Manager as DB;
-use Model\Post;
+use Model\Teachers;
 use Src\View;
 use Src\Request;
 use Model\User;
@@ -64,7 +64,7 @@ class Site
 
     public function index(Request $request): string
     {
-        $posts = Post::where('id', $request->id)->get();
+        $posts = teachers::where('id', $request->id)->get();
         return (new View())->render('site.post', ['posts' => $posts]);
     }
 
@@ -76,8 +76,10 @@ class Site
 
     public function teachers(): string
     {
-        return new View('site.teachers', ['message' => 'Преподаватели']);
+        $teachers = Teachers::all();
+        return (new View())->render('site.teachers', ['teachers' => $teachers]);
     }
+
 
 
     public function discipline(): string
