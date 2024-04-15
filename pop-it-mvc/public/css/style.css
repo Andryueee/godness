@@ -186,11 +186,31 @@ p{
     display: flex;
 }
 
+
+
 .teachers_list{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+
 }
+.list_items {
+    list-style: none;
+
+}
+.list_items li {
+    margin-bottom: 10px;
+
+}
+.teacher_info{
+    display: inline-block;
+}
+/*.lectures_btn{*/
+/*    display: inline-block;*/
+/*    margin-right: 10px;*/
+/*}*/
+
+
+
+
+
 
 .teachers_birth_date{
     padding-left: 40px;

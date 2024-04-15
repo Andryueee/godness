@@ -3,6 +3,8 @@
 namespace Controller;
 
 use Illuminate\Database\Capsule\Manager as DB;
+use Model\Departments;
+use Model\Disciplines;
 use Model\Teachers;
 use Src\View;
 use Src\Request;
@@ -82,17 +84,21 @@ class Site
 
 
 
-    public function discipline(): string
+    public function disciplines(): string
     {
-        return new View('site.discipline', ['message' => 'Дисциплины']);
+        $disciplines = Disciplines::all();
+
+        return (new View())->render('site.disciplines', ['disciplines' => $disciplines]);
     }
     public function departments(): string
     {
-        return new View('site.departments', ['message' => 'Кафедры']);
+        $departments = Departments::all();
+        return (new View())->render('site.departments', ['departments' => $departments]);
     }
-    public function add(): string
+    public function add(Request $request): string
     {
-        return new View('site.add', ['message' => 'добавление преподавателя']);
+
+        return new View('site.add');
     }
 
     public function add_discipline(): string
