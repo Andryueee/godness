@@ -11,17 +11,15 @@ class Teachers extends Model
 
     public $timestamps = false;
     protected $fillable = [
-        'lastname',
-        'firstname',
-        'patronymic',
-        'age',
+
+            'lastname',
+            'firstname',
+            'patronymic',
+            'gender',
+            'age',
+            'place',
+            'job',
+            'img',
     ];
 
-    protected static function booted()
-    {
-        static::created(function ($user) {
-            $user->password = md5($user->password);
-            $user->save();
-        });
-    }
 }

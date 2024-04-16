@@ -9,4 +9,11 @@ class Disciplines extends Model
 {
     use HasFactory;
     public $timestamps = false;
+
+    protected $fillable = [
+
+        'name',
+        'id_departments',
+
+    ];
 }

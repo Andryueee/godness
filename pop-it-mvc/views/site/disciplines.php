@@ -6,19 +6,19 @@ if (!app()->auth::check()):
 <?php
 else:
     ?>
+    <h1>Список дисциплин</h1>
+<!--    <div class="add_departments_div">-->
+        <a class="add_teacher_button" href="add_discipline">Добавить</a>
+<!--    </div>-->
     <ul class="list_items">
         <?php foreach ($disciplines as $discipline): ?>
             <li>
                 <span class="teacher_info"><?php echo $discipline->name; ?></span>
-                <a href="add_lecturer" class="lecturers_btn"><?php echo 'Изм'; ?></a>
-                <a href="#" class="lecturers_btn"><?php echo 'Удал'; ?></a>
             </li>
 
         <?php endforeach; ?>
     </ul>
-    <div class="add_departments_div">
-        <a class="add_teacher_button" href="add_departments">Добавить</a>
-    </div>
+
 <?php
 endif;
 ?>

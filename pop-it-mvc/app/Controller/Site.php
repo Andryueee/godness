@@ -12,6 +12,7 @@ use Model\User;
 use Src\Auth\Auth;
 use Src\Validator\Validator;
 
+
 class Site
 {
 
@@ -62,7 +63,45 @@ class Site
     }
 
 
+    public function add(Request $request): string
+    {
+        // Проверяем, была ли отправлена форма
+        if ($request->method === 'POST') {
+            // Проверяем, было ли загружено изображение
+            if (isset($_FILES['img']) && $_FILES['img']['error'] === UPLOAD_ERR_OK) {
+                // Путь для сохранения изображения
 
+                $target_dir = "/srv/users/exfbiggp/ceinizh-m3/pop-it-mvc/public/image/";;
+                $target_file = $target_dir . basename($_FILES['img']['name']);
+
+                // Перемещаем загруженное изображение в указанную директорию
+                if (move_uploaded_file($_FILES['img']['tmp_name'], $target_file)) {
+                    echo "Изображение успешно загружено.";
+                    // Получаем путь к загруженному изображению
+                    $img_path = $_FILES['img']['name'];
+                } else {
+                    echo "Ошибка при загрузке изображения.";
+                }
+            } else {
+                echo "Изображение не было загружено.";
+            }
+
+            // Добавляем путь к изображению к данным о преподавателе
+            $teacherData = $request->all();
+            $teacherData['img'] = $img_path ?? null; // Добавляем путь к изображению, если он был загружен
+
+            // Попытка создания записи о преподавателе и сохранения пути к изображению в базе данных
+            if (Teachers::create($teacherData)) {
+                return new View('site.add', ['message' => 'Преподаватель успешно добавлен']);
+            } else {
+                return new View('site.add', ['message' => 'Ошибка при добавлении преподавателя']);
+            }
+        }
+
+        return new View('site.add');
+    }
+
+//"/srv/users/exfbiggp/ceinizh-m3/pop-it-mvc/public/img/";
 
     public function index(Request $request): string
     {
@@ -95,20 +134,23 @@ class Site
         $departments = Departments::all();
         return (new View())->render('site.departments', ['departments' => $departments]);
     }
-    public function add(Request $request): string
-    {
 
-        return new View('site.add');
+    public function add_discipline(Request $request): string
+    {
+        if ($request->method==='POST' && Disciplines::create($request->all())){
+            return new View('site.add_discipline', ['message'=>'Кафедра успешно добавлена']);
+        }
+        $disciplines = Disciplines::all();
+        $departments = Departments::all();
+        return new View('site.add_discipline', ['departments'=>$departments, 'disciplines'=>$disciplines]);
     }
 
-    public function add_discipline(): string
+    public function add_departments(Request $request): string
     {
-        return new View('site.add_discipline', ['message' => 'добавление преподавателя']);
-    }
-
-    public function add_departments(): string
-    {
-        return new View('site.add_departments', ['message' => 'добавление преподавателя']);
+        if ($request->method==='POST' && Departments::create($request->all())){
+            return new View('site.add_departments', ['message'=>'Кафедра успешно добавлена']);
+        }
+        return new View('site.add_departments');
     }
 
 
