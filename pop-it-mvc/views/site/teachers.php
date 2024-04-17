@@ -8,18 +8,20 @@ if (!app()->auth::check()):
 else:
     ?>
     <h1>Список преподавателей</h1>
-    <a class="add_teacher_button" href="add">Добавить преподавателя</a>
+    <div class="but_departments"><a class="add_departments_button" href="add">Добавить</a></div>
+    <div class="add_departments_div">
     <ul class="list_items">
         <?php foreach ($teachers as $teacher): ?>
             <li>
-                <span class="teacher_info"><?php echo $teacher->lastname . ' ' . $teacher->firstname . ' ' . $teacher->patronymic . ' ' . $teacher->age . ' ' . $teacher->place . ' ' . $teacher->job; ?></span>
                 <?php if (!empty($teacher->img)): ?>
-                    <img src="<?= app()->settings->getRootPath() ?>/public/image/<?php echo $teacher->img; ?>" alt="Фото преподавателя">
+                    <img class="photo_teacher" src="<?= app()->settings->getRootPath() ?>/public/image/<?php echo $teacher->img; ?>" alt="Фото преподавателя">
                 <?php endif; ?>
+                <span class="teacher_info"><?php echo $teacher->lastname . ' ' . $teacher->firstname . ' ' . $teacher->patronymic . ' ' . $teacher->age . ' ' . $teacher->place . ' ' . $teacher->job; ?></span>
             </li>
 
         <?php endforeach; ?>
     </ul>
+    </div>
 
 <?php
 endif;

@@ -8,7 +8,8 @@ else:
     ?>
     <h1>Список дисциплин</h1>
 <!--    <div class="add_departments_div">-->
-        <a class="add_teacher_button" href="add_discipline">Добавить</a>
+    <div class="but_departments"><a class="add_departments_button" href="add_discipline">Добавить</a></div>
+<div class="add_departments_div">
 <!--    </div>-->
     <ul class="list_items">
         <?php foreach ($disciplines as $discipline): ?>
@@ -18,6 +19,7 @@ else:
 
         <?php endforeach; ?>
     </ul>
+    </div>
 
 <?php
 endif;
