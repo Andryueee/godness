@@ -20,9 +20,9 @@ else:
             <label>Введите отчество</label>
             <input class="add_input" type="text" name="patronymic">
             <label>Введите пол</label>
-            <input class="add_input" type="text" name="gender">
-            <label>Введите возраст</label>
-            <input class="add_input" type="text" name="age">
+            <input class="add_input" type="text" placeholder="М/Ж" name="gender">
+            <label>Введите дату рождения</label>
+            <input class="add_input" type="date" name="age">
             <label>Введите город</label>
             <input class="add_input" type="text" name="place">
             <label>Введите должность</label>

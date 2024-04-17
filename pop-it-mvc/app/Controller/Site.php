@@ -64,6 +64,7 @@ class Site
     }
 
 
+
     public function add(Request $request): string
     {
         // Проверяем, была ли отправлена форма
@@ -72,14 +73,16 @@ class Site
                 'lastname' => ['required'],
                 'firstname' => ['required'],
                 'patronymic' => ['required'],
-                'gender' => ['required'],
-                'age' => ['required'],
+                'gender' => ['required', 'in:М,Ж'],
+                'age' => ['required', 'integer'], // Теперь требуется, чтобы возраст был целым числом
                 'place' => ['required'],
                 'job' => ['required'],
                 'img' => []
             ], [
                 'required' => 'Поле :field пусто',
-                'unique' => 'Поле :field должно быть уникально'
+                'integer' => 'Поле :field должно быть целым числом',
+                'in' => 'Недопустимое значение для поля :field',
+                'unique' => 'Поле :field должно быть уникальным'
             ]);
             if($validator->fails()){
                 return new View('site.add',
@@ -88,7 +91,6 @@ class Site
             // Проверяем, было ли загружено изображение
             if (isset($_FILES['img']) && $_FILES['img']['error'] === UPLOAD_ERR_OK) {
                 // Путь для сохранения изображения
-
                 $target_dir = "/srv/users/exfbiggp/ceinizh-m3/pop-it-mvc/public/image/";;
                 $target_file = $target_dir . basename($_FILES['img']['name']);
 
@@ -106,7 +108,7 @@ class Site
 
             // Добавляем путь к изображению к данным о преподавателе
             $teacherData = $request->all();
-            $teacherData['img'] = $img_path ?? null; // Добавляем путь к изображению, если он был загружен
+            $teacherData['img'] = $img_path ?? null;
 
             // Попытка создания записи о преподавателе и сохранения пути к изображению в базе данных
             if (Teachers::create($teacherData)) {
