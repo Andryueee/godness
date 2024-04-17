@@ -11,6 +11,7 @@ use Src\Request;
 use Model\User;
 use Src\Auth\Auth;
 use Src\Validator\Validator;
+use search\TeachersSearch;
 
 
 class Site
@@ -67,6 +68,23 @@ class Site
     {
         // Проверяем, была ли отправлена форма
         if ($request->method === 'POST') {
+            $validator = new Validator($request->all(), [
+                'lastname' => ['required'],
+                'firstname' => ['required'],
+                'patronymic' => ['required'],
+                'gender' => ['required'],
+                'age' => ['required'],
+                'place' => ['required'],
+                'job' => ['required'],
+                'img' => []
+            ], [
+                'required' => 'Поле :field пусто',
+                'unique' => 'Поле :field должно быть уникально'
+            ]);
+            if($validator->fails()){
+                return new View('site.add',
+                    ['message' => json_encode($validator->errors(), JSON_UNESCAPED_UNICODE)]);
+            }
             // Проверяем, было ли загружено изображение
             if (isset($_FILES['img']) && $_FILES['img']['error'] === UPLOAD_ERR_OK) {
                 // Путь для сохранения изображения
@@ -138,6 +156,18 @@ class Site
     public function add_discipline(Request $request): string
     {
         if ($request->method==='POST' && Disciplines::create($request->all())){
+            $validator = new Validator($request->all(), [
+                'name' => ['required'],
+
+            ], [
+                'required' => 'Поле :field пусто',
+                'unique' => 'Поле :field должно быть уникально'
+            ]);
+            if($validator->fails()){
+                return new View('site.add_discipline',
+                    ['message' => json_encode($validator->errors(), JSON_UNESCAPED_UNICODE)]);
+            }
+
             return new View('site.add_discipline', ['message'=>'Кафедра успешно добавлена']);
         }
         $disciplines = Disciplines::all();
@@ -148,9 +178,38 @@ class Site
     public function add_departments(Request $request): string
     {
         if ($request->method==='POST' && Departments::create($request->all())){
+            $validator = new Validator($request->all(), [
+                'name' => ['required'],
+
+            ], [
+                'required' => 'Поле :field пусто',
+                'unique' => 'Поле :field должно быть уникально'
+            ]);
+            if($validator->fails()){
+                return new View('site.add_departments',
+                    ['message' => json_encode($validator->errors(), JSON_UNESCAPED_UNICODE)]);
+            }
             return new View('site.add_departments', ['message'=>'Кафедра успешно добавлена']);
         }
         return new View('site.add_departments');
+    }
+
+    public function SearchTeachers(Request $request): string
+    {
+        $teachers = Teachers::all();
+
+        if ($request->method === 'POST' && isset($_POST['search_query'])) {
+            $search_query = $_POST['search_query'];
+            $searchableFields =['name','surname','patronymic'];
+            $query = Teachers::query();
+            if (!empty($search_query)) {
+                $teachers = TeachersSearch::search($query, $search_query,$searchableFields);
+            }
+        }
+
+        return new View('site.SearchTeachers', ['teachers' => $teachers]);
+
+
     }
 
 

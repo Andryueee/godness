@@ -14,7 +14,7 @@ else:
             <li>
                 <span class="teacher_info"><?php echo $teacher->lastname . ' ' . $teacher->firstname . ' ' . $teacher->patronymic . ' ' . $teacher->age . ' ' . $teacher->place . ' ' . $teacher->job; ?></span>
                 <?php if (!empty($teacher->img)): ?>
-                    <img src="<?php echo $teacher->img; ?>" alt="Фото преподавателя">
+                    <img src="<?= app()->settings->getRootPath() ?>/public/image/<?php echo $teacher->img; ?>" alt="Фото преподавателя">
                 <?php endif; ?>
             </li>
 
