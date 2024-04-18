@@ -14,7 +14,6 @@ class Departments extends Model
     protected $fillable = [
 
         'name',
-        'id_teacher',
 
     ];
 

@@ -16,7 +16,7 @@ else:
                 <?php if (!empty($teacher->img)): ?>
                     <img class="photo_teacher" src="<?= app()->settings->getRootPath() ?>/public/image/<?php echo $teacher->img; ?>" alt="Фото преподавателя">
                 <?php endif; ?>
-                <span class="teacher_info"><?php echo $teacher->lastname . ' ' . $teacher->firstname . ' ' . $teacher->patronymic . ' ' . $teacher->age . ' ' . $teacher->gender . ' ' . $teacher->place . ' ' . $teacher->job; ?></span>
+                <span class="teacher_info"><?php echo $teacher->lastname . ' ' . $teacher->firstname . ' ' . $teacher->patronymic . ' ' . $teacher->age . ' ' . $teacher->gender . ' ' . $teacher->place . ' ' . $teacher->job. ' '. $teacher->department->name; ?></span>
             </li>
 
         <?php endforeach; ?>

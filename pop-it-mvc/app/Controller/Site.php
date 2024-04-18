@@ -67,6 +67,7 @@ class Site
 
     public function add(Request $request): string
     {
+        $departments = Departments::all();
         // Проверяем, была ли отправлена форма
         if ($request->method === 'POST') {
             $validator = new Validator($request->all(), [
@@ -112,13 +113,15 @@ class Site
 
             // Попытка создания записи о преподавателе и сохранения пути к изображению в базе данных
             if (Teachers::create($teacherData)) {
-                return new View('site.add', ['message' => 'Преподаватель успешно добавлен']);
+                return new View('site.add', ['message' => 'Преподаватель успешно добавлен', 'departments' => $departments]);
             } else {
                 return new View('site.add', ['message' => 'Ошибка при добавлении преподавателя']);
             }
         }
 
-        return new View('site.add');
+
+
+        return new View('site.add', ['departments' => $departments]);
     }
 
 //"/srv/users/exfbiggp/ceinizh-m3/pop-it-mvc/public/img/";
@@ -185,7 +188,6 @@ class Site
         if ($request->method==='POST' && Departments::create($request->all())){
             $validator = new Validator($request->all(), [
                 'name' => ['required'],
-                'id_teacher' => ['required'],
 
             ], [
                 'required' => 'Поле :field пусто',

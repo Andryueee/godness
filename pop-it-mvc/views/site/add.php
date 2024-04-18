@@ -30,6 +30,14 @@ else:
             <input class="add_input" type="text" name="place">
             <label>Введите должность</label>
             <input class="add_input" type="text" name="job">
+            <label for="dep">Выберите кафедру</label>
+            <select id="dep" name="id_department" required>
+                <option value="" selected></option>
+                <?php foreach ($departments as $department): ?>
+                    <option name="department" value="<?php echo $department->id; ?>"><?php echo $department->name; ?></option>
+                <?php endforeach; ?>
+            </select>
+
             <label>Выберите фото</label>
             <input class="add_input" type="file" name="img" required>
 
