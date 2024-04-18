@@ -12,10 +12,11 @@ else:
         <ul class="list_items">
             <?php foreach ($departments as $department): ?>
                 <li>
-                    <span class="teacher_info"><?php echo $department->name; ?></span>
+                    <span class="teacher_info"><?php echo $department->name. ' ' . $department->teachers->lastname . ' ' . $department->teachers->firstname . ' ' . $department->teachers->patronymic; ?></span>
                 </li>
 
             <?php endforeach; ?>
+
         </ul>
     </div>
 <?php

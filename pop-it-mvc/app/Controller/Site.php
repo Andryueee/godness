@@ -77,7 +77,7 @@ class Site
                 'age' => ['required', 'integer'], // Теперь требуется, чтобы возраст был целым числом
                 'place' => ['required'],
                 'job' => ['required'],
-                'img' => []
+                'img' => ['required'],
             ], [
                 'required' => 'Поле :field пусто',
                 'integer' => 'Поле :field должно быть целым числом',
@@ -147,7 +147,9 @@ class Site
     {
         $disciplines = Disciplines::all();
 
-        return (new View())->render('site.disciplines', ['disciplines' => $disciplines]);
+        $comment = Disciplines::find(1);
+
+        return (new View())->render('site.disciplines', ['disciplines' => $disciplines, $comment->departments->name]);
     }
     public function departments(): string
     {
@@ -177,11 +179,13 @@ class Site
         return new View('site.add_discipline', ['departments'=>$departments, 'disciplines'=>$disciplines]);
     }
 
+
     public function add_departments(Request $request): string
     {
         if ($request->method==='POST' && Departments::create($request->all())){
             $validator = new Validator($request->all(), [
                 'name' => ['required'],
+                'id_teacher' => ['required'],
 
             ], [
                 'required' => 'Поле :field пусто',
@@ -191,10 +195,21 @@ class Site
                 return new View('site.add_departments',
                     ['message' => json_encode($validator->errors(), JSON_UNESCAPED_UNICODE)]);
             }
+
             return new View('site.add_departments', ['message'=>'Кафедра успешно добавлена']);
         }
-        return new View('site.add_departments');
+        $departments = Departments::all();
+        $teachers = Teachers::all();
+        return new View('site.add_departments', ['teachers'=>$teachers, 'departments'=>$departments]);
     }
+
+
+
+
+
+
+
+
 
     public function SearchTeachers(Request $request): string
     {

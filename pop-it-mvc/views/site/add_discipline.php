@@ -11,16 +11,17 @@ else:
     <div class="add_person_div">
         <form class="signup_page" method="post">
 
-            <input name="csrf_token" type="hidden" value="<?= app()->auth::generateCSRF() ?>"/>
+            <input name="csrf_token" type="hidden" value="<?= app()->auth::generateCSRF() ?>" required/>
 
             <label>Введите название дисциплины</label>
-            <input class="add_input" type="text" name="name">
+            <input class="add_input" type="text" name="name" required>
             <label for="b">Укажите кафедру</label>
 
 
-            <select id="b">
+            <select id="departments" name="id_department" required>
+                <option value="" selected></option>
                 <?php foreach ($departments as $department): ?>
-                <option value="id"><?php echo $department->name; ?></option>
+                <option name="department" value="<?php echo $department->id; ?>"><?php echo $department->name; ?></option>
                 <?php endforeach; ?>
             </select>
 

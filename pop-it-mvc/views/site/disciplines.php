@@ -14,7 +14,7 @@ else:
     <ul class="list_items">
         <?php foreach ($disciplines as $discipline): ?>
             <li>
-                <span class="teacher_info"><?php echo $discipline->name; ?></span>
+                <span class="teacher_info"><?php echo $discipline->name . ' ' . $discipline->departments->name; ?></span>
             </li>
 
         <?php endforeach; ?>

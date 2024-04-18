@@ -14,7 +14,15 @@ else:
             <input name="csrf_token" type="hidden" value="<?= app()->auth::generateCSRF() ?>"/>
 
             <label>Введите название кафедры</label>
-            <input class="add_input" type="text" name="name">
+            <input class="add_input" type="text" name="name" required>
+
+            <label for="b">Укажите преподавателя</label>
+            <select id="teachers" name="id_teacher" required>
+                <option value="" selected></option>
+                <?php foreach ($teachers as $teacher): ?>
+                    <option name="teacher" value="<?php echo $teacher->id; ?>"><?php echo $teacher->lastname; ?></option>
+                <?php endforeach; ?>
+            </select>
 
 
             <button type="submit" class="add_button">Добавить</button>
